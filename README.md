@@ -1,46 +1,18 @@
-# PixelDB
+# PixelDB – Lightweight Embeddable Database for AI-Powered Code Analysis
 
-PixelDB is a minimal, embeddable database written in C. It stores data in memory
-and provides a basic API for CRUD operations.
+PixelDB is a minimalist, embeddable in-memory database for C, designed for developers building high-performance tools that require fast storage and retrieval of structured data.
 
-## Current Status
+While PixelDB starts as a general key-value store, it is designed with future AI/ML applications in mind, such as:
 
-- Project structure created
-- Core API stubs implemented:
+* Storing vector embeddings of code snippets
+* Caching features extracted from source code
+* Supporting next-generation static analysis tools that use AI to detect vulnerabilities
 
-  - `pixeldb_create`
-  - `pixeldb_free`
-  - `pixeldb_store`
-  - `pixeldb_load`
+## Key Features
 
-- Makefile included for building the library
-- Basic test included (`tests/test_pixeldb.c`)
+* Minimal and fast: Pure C, zero external dependencies, perfect for embedding in tools and microservices.
+* TDD-driven: Fully tested with Unity for reliability and maintainability.
+* Flexible and extensible: Start with general key-value storage, evolve into vector storage and AI-ready data structures.
+* Practical for developers: Ideal for storing code metadata, snippet features, or ML embeddings during static analysis or other runtime tasks.
 
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/pixeldb.git
-cd pixeldb
-```
-
-Build the library:
-
-```bash
-make
-```
-
-Run the test:
-
-```bash
-gcc -Iinclude tests/test_pixeldb.c libpixeldb.a -o test_pixeldb
-./test_pixeldb
-```
-
-## Next Steps
-
-- Implement full CRUD functionality
-- Add file persistence
-- Optimize memory management
-- Improve documentation and examples
+PixelDB is perfect for AI-enhanced cybersecurity tooling, enabling developers to experiment with intelligent vulnerability detection while keeping memory footprint low and performance high.
